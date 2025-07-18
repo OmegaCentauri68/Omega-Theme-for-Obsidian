@@ -24,6 +24,7 @@ It's not as feature-rich as the veteran themes (yet), but it's vibing hard and g
 
 ## 📸 Preview
 
+![](img/img00.png)
 ![](img/img01.png)
 ![](img/img02.png)
 
