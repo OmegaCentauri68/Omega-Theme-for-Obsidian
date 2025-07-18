@@ -95,10 +95,10 @@ body {
     --italic-color: var(--plasma-pink);
     --h1-color: var(--white-nova);
     --h2-color: var(--starfire-yellow);
-    --h3-color: var(--solar-flare-orange);
-    --h4-color: var(--plasma-pink);
-    --h5-color: var(--nebula-pink);
-    --h6-color: var(--white-nova);
+    --h3-color: var(--solar-gold);
+    --h4-color: var(--lava-orange);
+    --h5-color: var(--plasma-pink);
+    --h6-color: var(--nebula-pink);
 
     /* Links */
     --link-color: var(--starfire-yellow);
@@ -184,7 +184,6 @@ body {
     --metadata-property-radius-focus: var(--radius-m);
     --metadata-property-padding: 0 var(--size-4-2);
     --metadata-property-background: var(--deep-space-blue-1);
-    --metadata-property-background-hover: var(--void-purple);
     --metadata-input-height: calc(var(--font-text-size) * 2.0);
 
     /* File Navigator */
@@ -198,7 +197,7 @@ body {
 
     /* Blockquotes */
     --blockquote-border-color: var(--starfire-yellow);
-    --blockquote-background-color: color-mix(in srgb, var(--solar-gold) 10%, transparent);
+    --blockquote-background-color: color-mix(in srgb, var(--electric-purple) 10%, transparent);
 
     /* Scrollbars */
     --scrollbar-thumb-bg: var(--lava-orange);
@@ -249,7 +248,9 @@ hr {
 }
 .inline-title:not([data-level]) {
     text-align: center;
-    text-decoration: underline var(--white-nova);
+    background: linear-gradient(to right, var(--starfire-yellow) 40%, var(--lava-orange) 60%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .mod-fade:not(.mod-at-end):after {
     background: none;
@@ -262,13 +263,12 @@ hr {
     color: var(--plasma-pink);
 }
 
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before {
-    border-inline-start: 4px solid var(--starfire-yellow);
-    border-radius: var(--radius-l) 0 0 var(--radius-l);
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote:before, .markdown-source-view.mod-cm6 .cm-blockquote-border:before {
+    border-inline-start: 3px solid var(--starfire-yellow);
 }
 
 .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
-    background: linear-gradient(to right, color-mix(in srgb, var(--starfire-yellow) 30%, transparent) 0%, color-mix(in srgb, var(--electric-purple) 10%, transparent) 2%);
+    background: linear-gradient(to right, color-mix(in srgb, var(--electric-purple) 30%, transparent) 0%, color-mix(in srgb, var(--electric-purple) 10%, transparent) 50%);
 }
 
 .cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
@@ -570,4 +570,8 @@ input.prompt-input:focus, input.prompt-input:focus-visible {
 .community-item.is-selected .community-item-name {
     font-weight: bold;
     text-decoration: underline;
+}
+
+.metadata-property:hover {
+    background: linear-gradient(to right, var(--electric-purple) 0%, var(--deep-space-blue-1) 100%);
 }
