@@ -238,10 +238,10 @@ body {
 }
 
 /* Misc */
-hr {
+hr, .markdown-rendered hr {
     border-color: var(--solar-gold);
 }
-.view-content .cm-strong.cm-em, .markdown-source-view.mod-cm6 .HyperMD-quote .cm-strong.cm-em {
+.view-content .cm-strong.cm-em, .markdown-source-view.mod-cm6 .HyperMD-quote .cm-strong.cm-em, .markdown-reading-view strong em {
     color: var(--azure);
 }
 
@@ -257,6 +257,9 @@ hr {
 }
 .mod-fade:not(.mod-at-end):after {
     background: none;
+}
+.cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
+    padding: 0.1em 0.15em; 
 }
 
 /* Blockquote */
@@ -286,6 +289,14 @@ div.cm-table-widget, div.el-table {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
+}
+th:has(mark), td:has(mark) {
+    background-color: var(--lava-orange) !important;
+}
+th:has(mark) mark, td:has(mark) mark {
+    background-color: transparent !important;
+    color: var(--blackhole) !important;
+    font-weight: bold;
 }
 
 /* Link */
