@@ -235,9 +235,6 @@ body {
     /* Window Frame */
     --titlebar-background: var(--deep-space-blue-1);
     --titlebar-background-focused: var(--deep-space-blue-1);
-
-    /* Vault Profile */
-    --vault-profile-color: var(--plasma-pink);
 }
 
 /* Misc */
@@ -278,19 +275,25 @@ hr {
     background: linear-gradient(to right, color-mix(in srgb, var(--electric-purple) 30%, transparent) 0%, color-mix(in srgb, var(--electric-purple) 10%, transparent) 50%);
 }
 
+/* Vault Profile */
+body:not(.is-mobile) .workspace-split.mod-left-split .workspace-sidedock-vault-profile {
+    border: none;
+    background: linear-gradient(to bottom, var(--starfire-yellow) 0%, var(--deep-space-blue-1) 10%);
+}
+
 /* Table */
-div.cm-table-widget {
+div.cm-table-widget, div.el-table {
     display: flex !important;
     flex-direction: row;
     justify-content: center;
 }
 
 /* Link */
-.cm-s-obsidian span.cm-hmd-internal-link .cm-underline {
+.cm-s-obsidian span.cm-hmd-internal-link .cm-underline, a.internal-link {
     text-decoration-color: var(--electric-purple);
     transition: color 0.1s ease-out;
 }
-.cm-s-obsidian span.cm-hmd-internal-link:hover .cm-underline:hover {
+.cm-s-obsidian span.cm-hmd-internal-link:hover .cm-underline:hover, a.internal-link:hover {
     text-decoration-color: var(--starfire-yellow);
     font-weight: bold;
 }
