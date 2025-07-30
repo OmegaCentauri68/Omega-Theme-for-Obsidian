@@ -9,8 +9,9 @@
 ## ✨ Features
 
 - A bold, custom **cosmic color palette**.
-- Minimal but elegant **gradient touches** — just enough to feel alive, but not enough to burn your eyes.
-- Currently supports core Obsidian components — plugin support is expanding over time.
+- Minimal yet refined **gradient accents** — vibrant enough to feel dynamic, but never overwhelming.
+- Toggle underline formatting using `==~~Underline~~==` for enhanced text emphasis.
+- Highlighting (`==Highlight==`) within a table cell will visually emphasize the entire cell.
 - Exclusively dark mode.
 
 ---
@@ -27,6 +28,8 @@ It's not as feature-rich as the veteran themes (yet), but it's vibing hard and g
 ![](img/img00.png)
 ![](img/img01.png)
 ![](img/img02.png)
+![](img/img03.png)
+![](img/img04.png)
 
 ---
 
