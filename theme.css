@@ -1,7 +1,40 @@
 /**
- * Omega Theme for Obsidian
- * Author: OmegaC
- * Version: 1.0.0
+Omega Theme for Obsidian
+Author: OmegaC
+Version: 1.0.2
+                                             ▓▓▓▓▓▓▓▓▓▓                                             
+                                       ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                                       
+                                   ▓▓▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                                   
+                                ▓▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                                
+                              ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                             
+                            ▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓        ▓█▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓                            
+                          ▒▒▒▒▒▒▒▒▒▒▒▒▓▓                    ██▓▓▓▓▓▓▓▓▓▓▓▓                          
+                         ▒▒▒▒▒▒▒▒▒▒▒▓         ▓▒               █▓▓▓▓▓▓▓▓▓▓▓                         
+                       ▒▒▒▒▒▒▒▒▒▒▒▒           ▓▒▒▒               █▓▓▓▓▓▓▓▓▓▓▓                       
+                      ▒▒▒▒▒▒▒▒▒▒▒             ▓▒▒▒▒▒▒▒             █▓▓▓▓▓▓▓▓▓▓                      
+                      ▒▒▒▒▒▒▒▒▒▒              ▓▒▒▒▒▒▒▒              █▓▓▓▓▓▓▓▓▓▓                     
+                     ▒▒░░▒▒▒▒▒▒               ▓▒▒▒▒▒▒▒               ██▓▓▓▓▓▓▓▓                     
+                    ▒▒░░░░░░▒                 ▓▒▒▒▒▓▓▓    ▓▓▓▓▓▓       █▓▓▓▓▓▓▓▓                    
+                   ▒▒░░░░░░░▒                 ▓▓▓▓    ▓▒▒▓▒▒▒▓▓▓       █▓▓▓▓▓▓▓▓▓                   
+                   ▒▒░░░░░░░                     ▒▒▒▒▒▒▒▒▒▒▒▒▒▓         ▓▓▓▓▓▓▓▓▓                   
+                   ▒░░░░░░░░                ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓         █▓▓▓▓▓▓▓▓                   
+                   ▒░░░░░░░░           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          █▓▓▓▓▓▓▓▓▓                  
+                   ▒░░░░░░░░      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓            █▓▓▓▓▓▓▓▓▓                  
+                   ▒░░░░░░░░ ░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓                 █▓▓▓▓▓▓▓▓▓                  
+                   ▒░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▓                      ▓▓▓▓▓▓▓▓▓                   
+                   ▒░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒   ▒▒▒▒▒                  ▓▓▓▓▓▓▓▓▓                   
+                   ▒░░░░░░░░░░░░░░░░▒▒▒▒      ▒▒▒▒▒▒▒▒                  ▓▓▓▓▓▓▓▓▓                   
+                    ▒░░░░░░░░░░░▒▒▒           ▒▒▒▒▒▒▒▒                 ▓▓▓▓▓▓▓▓▓                    
+                    ▒▒░░░░░░░░▒               ▒▒▒▒▒▒▒▒                ▓▓▓▓▓▓▓▓▓▓                    
+                     ▒░░░░░░░░░               ▒▒▒▒▒▒▒▒               ▓▓▓▓▓▓▓▓▓▓                     
+                      ▒░░░░░░░░░░             ▒▒▒▒▒▒▒▒             ▓▓▓▓▓▓▓▓▓▓▓                      
+                       ▒▒▒▒▒▒▒▒▒░             ▒▒▒▒▒▒▒▒             ▓▓▓▓▓▓▓▓▓▓                       
+                                              ▒▒▒▒▒▒▒▒                                              
+                ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓                
+               ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓              
+             ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓             
+            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓            
+           ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓███████████▓
  */
 
 :root {
@@ -99,6 +132,7 @@ body {
     --h4-color: var(--lava-orange);
     --h5-color: var(--plasma-pink);
     --h6-color: var(--nebula-pink);
+    --text-highlight-bg-rgb: 255, 210, 63;
 
     /* Links */
     --link-color: var(--starfire-yellow);
@@ -241,7 +275,7 @@ body {
 hr, .markdown-rendered hr {
     border-color: var(--solar-gold);
 }
-.view-content .cm-strong.cm-em, .markdown-source-view.mod-cm6 .HyperMD-quote .cm-strong.cm-em, .markdown-reading-view strong em {
+.cm-strong.cm-em, .markdown-source-view.mod-cm6 .HyperMD-quote .cm-strong.cm-em, strong em {
     color: var(--azure);
 }
 
@@ -260,6 +294,62 @@ hr, .markdown-rendered hr {
 }
 .cm-s-obsidian .cm-inline-code:not(.cm-formatting) {
     padding: 0.1em 0.15em; 
+}
+
+/* Underline */
+.cm-s-obsidian span.cm-highlight.cm-strikethrough {
+    background-color: transparent;
+    text-decoration: solid underline;
+}
+.cm-s-obsidian span.cm-highlight.cm-strikethrough.cm-strong {
+    color: var(--cornflower);
+}
+.cm-s-obsidian span.cm-highlight.cm-strikethrough.cm-em {
+    color: var(--plasma-pink);
+}
+.cm-s-obsidian span.cm-highlight.cm-strikethrough.cm-strong.cm-em {
+    color: var(--azure);
+}
+.markdown-rendered mark > del {
+    text-decoration: solid underline;
+}
+.markdown-rendered mark:has(del) {
+    background-color: transparent;
+}
+.markdown-rendered em > mark:has(del) {
+    color: var(--plasma-pink);
+}
+.markdown-rendered strong > mark:has(del) {
+    color: var(--cornflower);
+}
+.markdown-rendered strong > em > mark:has(del) {
+    color: var(--azure);
+}
+
+/* Image */
+.markdown-source-view.mod-cm6 .cm-content > img[contenteditable=false] {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > img[contenteditable=false][alt$="|left"] {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+.markdown-source-view.mod-cm6 .cm-content > img[contenteditable=false][alt$="|right"] {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+.markdown-rendered p:has(img) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.markdown-rendered p:has(img[alt$="|left"]) {
+    justify-content: left;
+}
+.markdown-rendered p:has(img[alt$="|right"]) {
+    justify-content: right;
 }
 
 /* Blockquote */
@@ -321,8 +411,14 @@ th:has(mark) mark, td:has(mark) mark {
 }
 
 /* Metadata */
+.metadata-property {
+    background-size: 200% 100% !important;
+    background-position: right center !important;
+    background: linear-gradient(to right, var(--electric-purple) 0%, var(--deep-space-blue-1) 50%);
+    transition: background-position 0.25s cubic-bezier(.6,0,.4,1);
+}
 .metadata-property:hover {
-    background: linear-gradient(to right, var(--electric-purple) 0%, var(--deep-space-blue-1) 100%);
+    background-position: left center !important;
 }
 
 /* Embeded Markdown */
@@ -330,11 +426,21 @@ th:has(mark) mark, td:has(mark) mark {
     border-radius: var(--radius-l);
 }
 .embed-title.markdown-embed-title {
+    border-radius: var(--radius-l) var(--radius-l) 0 0;
+}
+.embed-title.markdown-embed-title {
     padding: 8px 0 8px 24px;
     background: linear-gradient(to top, var(--starfire-yellow) 0%, var(--deep-space-blue-2) 10%);
 }
 .inline-embed .markdown-embed-content {
     padding: 8px 8px 8px 24px;
+}
+
+.markdown-embed-link {
+    color: var(--white-nova);
+}
+.markdown-embed-link:hover {
+    color: var(--starfire-yellow);
 }
 
 /* Clickable Icons */
@@ -576,10 +682,6 @@ th:has(mark) mark, td:has(mark) mark {
     background:
     linear-gradient(to top, color-mix(in srgb, var(--void-purple) 50%, transparent) 0%, var(--blackhole) 10%),
     linear-gradient(to top, color-mix(in srgb, var(--electric-purple) 20%, transparent) 0%, transparent 2%);
-}
-
-.markdown-source-view.mod-cm6 .cm-content > [contenteditable=false] {
-    margin: auto !important;
 }
 
 body:not(.is-phone) .vertical-tab-nav-item.is-active {
