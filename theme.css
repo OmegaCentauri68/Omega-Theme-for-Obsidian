@@ -618,9 +618,7 @@ th:has(mark) mark, td:has(mark) mark {
     color: var(--blackhole);
     transition: background-color 0.4s cubic-bezier(0,1,1,1), transform 0.3s ease, margin 0.3s ease;
 }
-.nav-buttons-container .clickable-icon[aria-disabled='true']:hover {
-    background-color: var(--starfire-yellow);
-}
+.nav-buttons-container .clickable-icon[aria-disabled='true']:hover { background-color: var(--starfire-yellow); }
 
 /* Workspace Ribbon & Sidebar Toggle Button */
 .workspace-ribbon, .workspace-ribbon.mod-left.is-collapsed {
@@ -674,9 +672,7 @@ th:has(mark) mark, td:has(mark) mark {
 }
 
 /* Nav Header */
-.nav-header {
-    background: linear-gradient(to top, var(--starfire-yellow) 0%, var(--deep-space-blue-2) 10%);
-}
+.nav-header { background: linear-gradient(to top, var(--starfire-yellow) 0%, var(--deep-space-blue-2) 10%); }
 
 .view-content {
     background:
@@ -691,9 +687,7 @@ body:not(.is-phone) .vertical-tab-nav-item.is-active {
 }
 
 /* Setting */
-.setting-item {
-    border-top: 1px solid var(--starfire-yellow);
-}
+.setting-item { border-top: 1px solid var(--starfire-yellow); }
 
 button.mod-cta {
     background-color: var(--deep-space-blue-1);
@@ -716,16 +710,12 @@ button:not(.clickable-icon):hover {
     background-color: color-mix(in srgb, var(--electric-purple) 20%, transparent);
     margin-bottom: -1px;
 }
-.mod-windows .titlebar-button:hover {
-    background-color: color-mix(in srgb, var(--electric-purple) 50%, transparent);
-}
+.mod-windows .titlebar-button:hover { background-color: color-mix(in srgb, var(--electric-purple) 50%, transparent); }
 
 input.prompt-input:focus, input.prompt-input:focus-visible {
     border-bottom: 2px solid var(--starfire-yellow);
 }
-.prompt-instructions {
-    border-top: 2px solid var(--starfire-yellow);
-}
+.prompt-instructions { border-top: 2px solid var(--starfire-yellow); }
 
 .community-item.is-selected .community-item-name {
     font-weight: bold;
@@ -768,3 +758,16 @@ div.markdown-rendered tr.table-view-tr-header { margin: 0; }
 }
 .table-view-table > tbody > tr > td:last-child { border-right: none; }
 .table-view-table > tbody > tr > td:first-child { border-left: none; }
+
+/* Canvas */
+.canvas-node-content.markdown-embed > .markdown-embed-content > .markdown-preview-view > .markdown-preview-sizer {
+    padding: 0 12px;
+}
+.canvas .markdown-rendered {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 4px;
+    }
+}
+.canvas .markdown-rendered p {
+    margin-top: 4px;
+}
