@@ -157,13 +157,15 @@ body {
     --list-marker-color-collapsed: var(--saffron);
 
     /* File navigator */
-    --nav-item-color-hover: var(--canary);
-    --nav-item-color-active: var(--canary);
-    --nav-item-color-selected: var(--canary);
-    --nav-item-background-hover: var(--violet);
-    --nav-item-background-active: var(--violet);
-    --nav-item-background-selected: var(--violet);
+    --nav-item-color-hover: var(--night);
+    --nav-item-color-active: var(--night);
+    --nav-item-color-selected: var(--night);
+    --nav-item-background-hover: transparent;
+    --nav-item-background-active: transparent;
+    --nav-item-background-selected: transparent;
     --nav-item-children-padding-start: 0px;
+    --nav-item-weight-hover: bold;
+    --nav-item-weight-active: bold;
 
     /* Metadata */
     --metadata-background: var(--oxford-blue);
@@ -209,7 +211,7 @@ body {
     --status-bar-radius: var(--radius-s) 0 0 0;
 
     /* Tabs */
-    --tab-background-active: var(--violet);
+    --tab-background-active: transparent;
     --tab-text-color: var(--night);
     --tab-text-color-active: var(--night);
     --tab-text-color-focused: var(--night);
@@ -219,6 +221,7 @@ body {
     --tab-font-weight: bold;
     --tab-curve: 0;
     --tab-radius-active: 4px;
+    --tab-divider-color: transparent;
 
     /* Stacked tabs */
     
@@ -319,17 +322,12 @@ body {
     --pdf-shadow: 0 0 0 1px var(--background-modifier-border);
     --pdf-thumbnail-shadow: 0 0 0 1px var(--background-modifier-border); }
 
-/* View Header */
+/* View header */
 div.view-header {
-    height: fit-content;
-    background-color: var(--oxford-blue) !important;
-    box-shadow: 0 0 0 2px var(--canary);
-    .view-header-title-container {
-        height: fit-content;
-    }
+    background-color: transparent !important;
 }
 
-/* Main Workspace */
+/* View content (Main workspace) */
 div.view-content {
     .inline-title {
         text-align: center;
@@ -338,6 +336,7 @@ div.view-content {
         background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+    mask-image: linear-gradient(to top, var(--night) 99%, transparent 100%);
 }
 
 /* Markdown Edit-mode */
@@ -625,5 +624,130 @@ div.view-content {
 .status-bar {
     div {
         font-weight: bold;
+    }
+}
+
+/* Window header */
+.mod-root .workspace-tab-header-container {
+    border-bottom-width: 2px;
+    .workspace-tab-header-container-inner {
+        margin: 3px 0;
+        padding-top: 0;
+        gap: 3px;
+    }
+    .workspace-tab-header {
+        background-size: 100% 250%;
+        background-position: center top;
+        background-image: linear-gradient(to top, var(--violet) 0%, var(--violet) 30%, transparent 70%, transparent 100%);
+        /* border: 2px solid var(--oxford-blue); */
+        padding: 0 4px;
+        text-decoration-color: var(--night);
+        transition: background-position 0.5s cubic-bezier(0, 0, 0, 1), color 0.5s cubic-bezier(0, 0, 0, 1), text-decoration-color 1s cubic-bezier(0, 0, 0, 1);
+        &.is-active {
+            background-position: center bottom;
+            box-shadow: none;
+            text-decoration: underline;
+        }
+        &:not(.is-active) {
+            color: var(--timber-wood);
+            &:hover {
+                background-position: center 50%;
+                .workspace-tab-header-inner {
+                    background-color: transparent;
+                }
+            }
+            .workspace-tab-header-inner-close-button {
+                color: var(--timber-wood);
+            }
+        }
+    }
+}
+
+/* Title Bar */
+.is-hidden-frameless.mod-windows .titlebar {
+    .titlebar-button-container.mod-right {
+        border-bottom: 1px solid var(--canary);
+    }
+}
+
+/* Ribbon */
+.workspace-ribbon.mod-left {
+    &:before {
+        border-bottom-width: 0;
+        border-right: 2px solid var(--canary);
+    }
+}
+
+/* Sidebar left */
+.workspace-split.mod-left-split {
+    .workspace-tab-header-container {
+        border-bottom-width: 0;
+        justify-content: center;
+        .workspace-tab-header-spacer { display: none; }
+        .workspace-tab-header-container-inner {
+            .workspace-tab-header {
+                .workspace-tab-header-inner {
+                    transition: background-color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), color 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+                &.is-active .workspace-tab-header-inner {
+                    background-color: var(--canary);
+                    svg { color: var(--night); }
+                }
+                &:not(.is-active) .workspace-tab-header-inner {
+                    background-color: var(--safety-orange);
+                    &:hover {
+                        background-color: var(--canary);
+                        svg { color: var(--night); }
+                    }
+                }
+            }
+        }
+    }
+    .nav-files-container {
+        background-image: linear-gradient(to top, color-mix(in srgb, var(--royal-purple) 70%, transparent 10%) 0%, transparent 70%);
+        scrollbar-gutter: stable;
+        
+    }
+    .nav-folder {
+        > .nav-folder-title {
+            border-radius: 14px 0 0 14px;
+            background-image: linear-gradient(to right, var(--canary) 0%, var(--canary) 35%, transparent 50%);
+            background-position: right center;
+            background-size: 200% 100%;
+            background-repeat: no-repeat;
+            transition-duration: 1s;
+            transition-property: background-position, color;
+            transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        &:not(.is-collapsed) > .nav-folder-title, &.is-collapsed > .nav-folder-title:hover {
+            background-position: left center;
+            color: var(--night);
+            font-weight: bold;
+            svg.svg-icon {
+                color: var(--night);
+            }
+        }
+    }
+    .nav-file > .nav-file-title {
+        border-radius: 4px 0 0 4px;
+        background-image: linear-gradient(to right, var(--saffron) 0%, var(--saffron) 35%, transparent 50%);
+        background-position: right center;
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+        transition-duration: 1s;
+        transition-property: background-position, color;
+        transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
+        &:hover, &.is-active {
+            background-position: left center;
+            color: var(--night);
+            font-weight: bold;
+            svg.svg-icon {
+                color: var(--night);
+            }
+        }
+    }
+    
+    .workspace-sidedock-vault-profile {
+        border: none !important;
     }
 }
