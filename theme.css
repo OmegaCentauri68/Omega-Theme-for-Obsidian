@@ -1,4 +1,4 @@
-/**
+/*
 Omega Theme for Obsidian
 Author: OmegaC
 Version: 1.1.0
@@ -15,7 +15,7 @@ Version: 1.1.0
                       ▒▒▒▒▒▒▒▒▒▒              ▓▒▒▒▒▒▒▒              █▓▓▓▓▓▓▓▓▓▓                     
                      ▒▒░░▒▒▒▒▒▒               ▓▒▒▒▒▒▒▒               ██▓▓▓▓▓▓▓▓                     
                     ▒▒░░░░░░▒                 ▓▒▒▒▒▓▓▓    ▓▓▓▓▓▓       █▓▓▓▓▓▓▓▓                    
-                   ▒▒░░░░░░░▒                 ▓▓▓▓    ▓▒▒▓▒▒▒▓▓▓       █▓▓▓▓▓▓▓▓▓                   
+                   ▒▒░░░░░░░▒                 ▓▓▓▓    ▓▒▒▓▒▒▒▓▓▓       █▓▓▓▓▓▓▓▓▓
                    ▒▒░░░░░░░                     ▒▒▒▒▒▒▒▒▒▒▒▒▒▓         ▓▓▓▓▓▓▓▓▓                   
                    ▒░░░░░░░░                ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓         █▓▓▓▓▓▓▓▓                   
                    ▒░░░░░░░░           ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓          █▓▓▓▓▓▓▓▓▓                  
@@ -652,13 +652,9 @@ div.view-content {
             color: var(--timber-wood);
             &:hover {
                 background-position: center 50%;
-                .workspace-tab-header-inner {
-                    background-color: transparent;
-                }
+                .workspace-tab-header-inner { background-color: transparent; }
             }
-            .workspace-tab-header-inner-close-button {
-                color: var(--timber-wood);
-            }
+            .workspace-tab-header-inner-close-button { color: var(--timber-wood); }
         }
     }
 }
@@ -675,6 +671,7 @@ div.view-content {
     &:before {
         border-bottom-width: 0;
         border-right: 2px solid var(--canary);
+        background-color: color-mix(in srgb, var(--yale-blue) 90%, black 100%);
     }
 }
 
@@ -706,12 +703,12 @@ div.view-content {
     .nav-files-container {
         background-image: linear-gradient(to top, color-mix(in srgb, var(--royal-purple) 70%, transparent 10%) 0%, transparent 70%);
         scrollbar-gutter: stable;
-        
+        mask-image: linear-gradient(to top, var(--night) 99%, transparent 100%);
     }
     .nav-folder {
         > .nav-folder-title {
             border-radius: 14px 0 0 14px;
-            background-image: linear-gradient(to right, var(--canary) 0%, var(--canary) 35%, transparent 50%);
+            background-image: linear-gradient(to right, var(--canary) 0%, var(--saffron) 35%, transparent 50%);
             background-position: right center;
             background-size: 200% 100%;
             background-repeat: no-repeat;
@@ -723,8 +720,25 @@ div.view-content {
             background-position: left center;
             color: var(--night);
             font-weight: bold;
-            svg.svg-icon {
-                color: var(--night);
+            svg.svg-icon { color: var(--night); }
+        }
+        > .nav-folder-title.is-selected {
+            font-weight: bold;
+            background-image: linear-gradient(to right, var(--safety-orange) 0%, var(--saffron) 35%, transparent 50%);
+            background-position: left center;
+        }
+        > .nav-folder-title.has-focus {
+            box-shadow: none !important;
+        }
+        > .nav-folder-title.is-being-renamed {
+            box-shadow: none;
+            background-image: linear-gradient(to right, var(--royal-purple) 0%, var(--violet) 35%, transparent 50%);
+            background-position: left center;
+            color: var(--white-smoke);
+            font-weight: bold;
+            &:hover {
+                color: var(--white-smoke);
+                svg.svg-icon { color: var(--white-smoke); }
             }
         }
     }
@@ -741,13 +755,28 @@ div.view-content {
             background-position: left center;
             color: var(--night);
             font-weight: bold;
-            svg.svg-icon {
-                color: var(--night);
-            }
+            svg.svg-icon { color: var(--night); }
+        }
+        &.is-selected {
+            background-position: left center;
         }
     }
     
     .workspace-sidedock-vault-profile {
         border: none !important;
+        padding-bottom: 4px !important;
+        background-image: linear-gradient(to bottom, color-mix(in srgb, var(--royal-purple) 70%, transparent 10%) 0%, var(--yale-blue) 20%);
+    }
+}
+
+/* Sidebar right */
+.workspace-split.mod-right-split {
+    .workspace-tab-header-container {
+        border-bottom-width: 2px;
+    }
+    .workspace-leaf-content[data-type='outline'] .view-content {
+        .tree-item {
+            
+        }
     }
 }
