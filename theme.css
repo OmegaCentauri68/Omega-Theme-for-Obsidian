@@ -772,6 +772,9 @@ div.view-content {
         border: none !important;
         padding-bottom: 4px !important;
         background-image: linear-gradient(to bottom, color-mix(in srgb, var(--royal-purple) 70%, transparent 10%) 0%, var(--yale-blue) 20%);
+        .workspace-drawer-vault-actions {
+            gap: 2px;
+        }
     }
 }
 
@@ -810,13 +813,16 @@ div.view-content {
 
 /* Buttons */
 .clickable-icon {
-    background-color: var(--safety-orange);
+    background-color: var(--saffron);
+    color: var(--night);
     transition-duration: 1s;
     transition-property: background-color;
     transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    svg.svg-icon { color: var(--night); }
     &:hover {
         background-color: var(--canary);
         color: var(--night);
+        svg.svg-icon { color: var(--night); }
     }
 }
 
