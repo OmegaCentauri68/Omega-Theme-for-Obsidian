@@ -325,6 +325,9 @@ body {
 /* View header */
 div.view-header {
     background-color: transparent !important;
+    .view-actions {
+        gap: 2px;
+    }
 }
 
 /* View content (Main workspace) */
@@ -700,10 +703,13 @@ div.view-content {
             }
         }
     }
+    .nav-header {
+        background-color: var(--yale-blue);
+        border-bottom: 2px solid var(--canary);
+    }
     .nav-files-container {
         background-image: linear-gradient(to top, color-mix(in srgb, var(--royal-purple) 70%, transparent 10%) 0%, transparent 70%);
         scrollbar-gutter: stable;
-        mask-image: linear-gradient(to top, var(--night) 99%, transparent 100%);
     }
     .nav-folder {
         > .nav-folder-title {
@@ -774,9 +780,54 @@ div.view-content {
     .workspace-tab-header-container {
         border-bottom-width: 2px;
     }
-    .workspace-leaf-content[data-type='outline'] .view-content {
-        .tree-item {
-            
+    .workspace-tab-header {
+        &.is-active {
+            background-color: var(--canary);
+            svg.svg-icon {
+                color: var(--night);
+            }
+        }
+    }
+    .workspace-leaf-content[data-type='outline'] .tree-item-self {
+        &:not(.is-active) .tree-item-inner {
+            color: var(--white-smoke);
+        }
+        &.is-active {
+            color: var(--canary);
+            text-decoration: underline;
+        }
+    }
+    .tag-container .tree-item-self .tree-item-inner, .outgoing-link-pane .tree-item-inner  {
+        color: var(--white-smoke);
+    }
+    #calendar-container {
+        td > div:hover {
+            background-color: var(--saffron);
+            color: var(--night);
+        }
+    }
+}
+
+/* Buttons */
+.clickable-icon {
+    background-color: var(--safety-orange);
+    transition-duration: 1s;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    &:hover {
+        background-color: var(--canary);
+        color: var(--night);
+    }
+}
+
+.menu.mod-tab-list {
+    border: 2px solid var(--canary);
+    border-radius: 4px;
+    .menu-item.selected {
+        background-color: var(--saffron);
+        color: var(--night);
+        svg.svg-icon {
+            color: var(--night);
         }
     }
 }
